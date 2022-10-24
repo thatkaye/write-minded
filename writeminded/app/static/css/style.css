@@ -5,6 +5,9 @@
 * License: https://bootstrapmade.com/license/
 */
 
+
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -130,7 +133,7 @@ h6 {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgb(0, 0, 0);
   height: 80px;
 }
 
@@ -139,7 +142,7 @@ h6 {
 }
 
 #header.header-scrolled {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgb(183, 156, 237);
   height: 60px;
 }
 

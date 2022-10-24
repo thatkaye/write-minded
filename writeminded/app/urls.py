@@ -1,7 +1,9 @@
+from cgitb import html
 from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.home, name = 'home.html')
+    path('', views.home, name = 'home'),
+    path('ideanest', views.ideanest, name = 'ideanest')
 ]
 
