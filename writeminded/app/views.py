@@ -8,3 +8,9 @@ def home(request):
 
 def ideanest(request):
     return render(request, "ideanest.html")
+
+def listoffilesIN(request):
+    return render(request, "listoffilesIN.html")
+
+def uploadfileIN(request):
+    return render(request, "uploadfileIN.html")

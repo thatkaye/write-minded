@@ -28,6 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/uploadfileIN.css' %}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: BizPage - v5.10.1
@@ -95,56 +96,61 @@
 
   <!-- ======= idea nest start ======= -->
   <main id="main">
-  <section id="services">
-    <div class="container" data-aos="fade-up">
-
-      <header class="section-header wow fadeInUp">
-        <h3>idea nest</h3>
-        <p>A tree has branches where leaves can grow. Just like an idea which can hold different ideas. Idea nest puts an idea within an idea, perhaps nesting some knowledge within some knowledge. </p>
-      </header>
-
-      <div class="row">
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon"><i class="bi bi-archive"></i></div>
-          <h4 class="title"><a href="{% url 'listoffilesIN' %}">List of Files</a></h4>
-          <p class="description">Viewing of all files/documents created in your account.</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon"><i class="bi bi-box-arrow-in-down"></i></div>
-          <h4 class="title"><a href="{% url 'uploadfileIN' %}">Upload File</a></h4>
-          <p class="description">Upload file from your local directory.</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon"><i class="bi bi-bar-chart"></i></div>
-          <h4 class="title"><a href="">view file/idea file</a></h4>
-          <p class="description">description</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon"><i class="bi bi-binoculars"></i></div>
-          <h4 class="title"><a href="">add idea file</a></h4>
-          <p class="description">description</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon"><i class="bi bi-brightness-high"></i></div>
-          <h4 class="title"><a href="">group files</a></h4>
-          <p class="description">description</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
-          <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-          <h4 class="title"><a href="">show group</a></h4>
-          <p class="description">descriptioni</p>
-        </div>
-
-      </div>
-
+  <!-- === File Upload ===
+Design a file upload element. Is it the loading screen and icon? A progress element? Are folders being uploaded by flying across the screen like Ghostbusters? ;)  
+-->
+<section id="portfolio" class="section-bg">
+<div class="row" data-aos="fade-up" data-aos-delay="100">
+  <div class=" col-lg-12">
+      <ul id="portfolio-flters">
+        <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">idea nest</a></li>
+      </ul>
     </div>
-  </section>
+  </div>
+
+<div id="FileUpload">
+  <div class="wrapper">
+    <div class="upload">
+      <p>Drag files here or <span class="upload__button">Browse</span></p>
+    </div>
+    <div class="uploaded uploaded--one">
+      <i class="far fa-file-pdf"></i>
+      <div class="file">
+        <div class="file__name">
+          <p>lorem_ipsum.pdf</p>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:100%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="uploaded uploaded--two">
+      <i class="far fa-file-pdf"></i>
+      <div class="file">
+        <div class="file__name">
+          <p>dolor_sit.pdf</p>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:80%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="uploaded uploaded--three">
+      <i class="far fa-file-pdf"></i>
+      <div class="file">
+        <div class="file__name">
+          <p>amet_consectetur.pdf</p>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:60%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </main>
   <!-- idea nest end -->
 
@@ -201,6 +207,7 @@
         </div>
       </div>
     </div>
+  </section><!-- list of files end -->
 
     <div class="container">
       <div class="copyright">
