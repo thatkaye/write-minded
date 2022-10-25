@@ -8,3 +8,6 @@ def home(request):
 
 def ideanest(request):
     return render(request, "ideanest.html")
+
+def signinsignup(request):
+    return render(request, "signin-signup.html")
