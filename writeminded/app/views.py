@@ -14,3 +14,15 @@ def listoffilesIN(request):
 
 def uploadfileIN(request):
     return render(request, "uploadfileIN.html")
+
+def viewfileIN(request):
+    return render(request, "viewfileIN.html")
+
+def addideaIN(request):
+    return render(request, "addideaIN.html")
+
+def groupfilesIN(request):
+    return render(request, "groupfilesIN.html")
+
+def showgroupIN(request):
+    return render(request, "showgroupIN.html")

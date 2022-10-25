@@ -45,9 +45,9 @@
 
       <div class="row justify-content-center align-items-center">
         <div class="col-xl-11 d-flex align-items-center justify-content-between">
-          <h1 class="logo"><a href="{% url 'home' %}">title</a></h1>
+          <!--<h1 class="logo"><a href="index.html">BizPage</a></h1>-->
           <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html" class="logo"><img src="img/logo.png" alt="" class="img-fluid"></a>-->
+           <a href="index.html" class="logo"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>
 
           <nav id="navbar" class="navbar">
             <ul>
@@ -118,27 +118,27 @@
         </div>
 
         <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon"><i class="bi bi-bar-chart"></i></div>
-          <h4 class="title"><a href="">view file/idea file</a></h4>
-          <p class="description">description</p>
+          <div class="icon"><i class="bi bi-binoculars"></i></div>
+          <h4 class="title"><a href="{% url 'viewfileIN' %}">View File/Idea File</a></h4>
+          <p class="description">Idea files/files can be edit and/or deleted.</p>
         </div>
 
         <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon"><i class="bi bi-binoculars"></i></div>
-          <h4 class="title"><a href="">add idea file</a></h4>
-          <p class="description">description</p>
+          <div class="icon"><i class="bi bi-cloud-plus"></i></div>
+          <h4 class="title"><a href="{% url 'addideaIN' %}">Add Idea File</a></h4>
+          <p class="description">Idea files are additional ideas within a file.</p>
         </div>
 
         <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon"><i class="bi bi-brightness-high"></i></div>
-          <h4 class="title"><a href="">group files</a></h4>
-          <p class="description">description</p>
+          <div class="icon"><i class="bi bi-collection"></i></div>
+          <h4 class="title"><a href="{% url 'groupfilesIN' %}">Group Files</a></h4>
+          <p class="description">Grouping of files accordingly</p>
         </div>
 
         <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
           <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-          <h4 class="title"><a href="">show group</a></h4>
-          <p class="description">descriptioni</p>
+          <h4 class="title"><a href="{% url 'showgroupIN' %}">Show Group</a></h4>
+          <p class="description">Created groups can be viewd and edited.</p>
         </div>
 
       </div>
@@ -155,8 +155,8 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>title</h3>
-            <p>description of website</p>
+            <h3>History Plotter</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
@@ -173,11 +173,11 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-              N. Bacalso Avenue <br>
-              Cebu, City 6000<br>
+              N.Bacalso Ave., <br>
+              Cebu City, Cebu 000<br>
               Philippines <br>
-              <strong>Phone:</strong> +639 558 955 4885<br>
-              <strong>Email:</strong> title@gmail.com<br>
+              <strong>Phone:</strong> +639 167 023 768<br>
+              <strong>Email:</strong> names@cit.edu<br>
             </p>
 
             <div class="social-links">
