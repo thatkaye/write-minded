@@ -100,6 +100,10 @@
 Design a file upload element. Is it the loading screen and icon? A progress element? Are folders being uploaded by flying across the screen like Ghostbusters? ;)  
 -->
 <section id="portfolio" class="section-bg">
+<div class="container" data-aos="fade-up">
+<header class="section-header">
+  <h3 class="section-title">upload file</h3>
+</header>
 <div class="row" data-aos="fade-up" data-aos-delay="100">
   <div class=" col-lg-12">
       <ul id="portfolio-flters">
@@ -117,7 +121,13 @@ Design a file upload element. Is it the loading screen and icon? A progress elem
       <i class="far fa-file-pdf"></i>
       <div class="file">
         <div class="file__name">
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
           <p>lorem_ipsum.pdf</p>
+            <ul id="portfolio-flters">
+              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">rename</a></li>
+              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">delete</a></li>
+            </ul>
+        </div>
           <i class="fas fa-times"></i>
         </div>
         <div class="progress">
@@ -125,11 +135,18 @@ Design a file upload element. Is it the loading screen and icon? A progress elem
         </div>
       </div>
     </div>
+    
     <div class="uploaded uploaded--two">
       <i class="far fa-file-pdf"></i>
       <div class="file">
         <div class="file__name">
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
           <p>dolor_sit.pdf</p>
+            <ul id="portfolio-flters">
+              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">rename</a></li>
+              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">delete</a></li>
+            </ul>
+        </div>
           <i class="fas fa-times"></i>
         </div>
         <div class="progress">
@@ -137,11 +154,18 @@ Design a file upload element. Is it the loading screen and icon? A progress elem
         </div>
       </div>
     </div>
+    
     <div class="uploaded uploaded--three">
       <i class="far fa-file-pdf"></i>
       <div class="file">
         <div class="file__name">
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
           <p>amet_consectetur.pdf</p>
+            <ul id="portfolio-flters">
+              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">rename</a></li>
+              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">delete</a></li>
+            </ul>
+        </div>
           <i class="fas fa-times"></i>
         </div>
         <div class="progress">
@@ -151,6 +175,8 @@ Design a file upload element. Is it the loading screen and icon? A progress elem
     </div>
   </div>
 </div>
+</div>
+</section>
 </main>
   <!-- idea nest end -->
 
