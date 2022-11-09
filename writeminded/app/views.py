@@ -8,6 +8,9 @@ def home(request):
 
 def ideanest(request):
     return render(request, "ideanest.html")
+    
+def signinsignup(request):
+    return render(request, "signin-signup.html")
 
 def listoffilesIN(request):
     return render(request, "listoffilesIN.html")
@@ -26,3 +29,4 @@ def groupfilesIN(request):
 
 def showgroupIN(request):
     return render(request, "showgroupIN.html")
+
