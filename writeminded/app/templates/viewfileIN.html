@@ -93,58 +93,124 @@
     </div>
   </footer><!-- Efor header to be visible end -->
 
-  <!-- ======= idea nest start ======= -->
+  <!-- ======= list of files start ======= -->
   <main id="main">
-  <section id="services">
+  <section id="portfolio" class="section-bg">
     <div class="container" data-aos="fade-up">
 
-      <header class="section-header wow fadeInUp">
-        <h3>idea nest</h3>
-        <p>A tree has branches where leaves can grow. Just like an idea which can hold different ideas. Idea nest puts an idea within an idea, perhaps nesting some knowledge within some knowledge. </p>
+      <header class="section-header">
+        <h3 class="section-title">view file/idea file</h3>
       </header>
 
-      <div class="row">
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+    <div class=" col-lg-12">
+        <ul id="portfolio-flters">
+          <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">idea nest</a></li>
+        </ul>
+      </div>
+    </div>
 
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon"><i class="bi bi-archive"></i></div>
-          <h4 class="title"><a href="{% url 'listoffilesIN' %}">List of Files</a></h4>
-          <p class="description">Viewing of all files/documents created in your account.</p>
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" class="img-fluid" alt="">
+            <a href="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Delete">
+              <i class="bi bi-trash"></i></a>
+            <a href="portfolio-details.html" class="link-details" title="Edit"><i class="bi bi-pen"></i></a>
+          </figure>
+
+          <div class="portfolio-info">
+            <h4><a href="portfolio-details.html">filename</a></h4>
+            <p>description</p>
+          </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon"><i class="bi bi-box-arrow-in-down"></i></div>
-          <h4 class="title"><a href="{% url 'uploadfileIN' %}">Upload File</a></h4>
-          <p class="description">Upload file from your local directory.</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon"><i class="bi bi-binoculars"></i></div>
-          <h4 class="title"><a href="{% url 'viewfileIN' %}">View File/Idea File</a></h4>
-          <p class="description">Idea files/files can be edit and/or deleted.</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon"><i class="bi bi-cloud-plus"></i></div>
-          <h4 class="title"><a href="{% url 'addideaIN' %}">Add Idea File</a></h4>
-          <p class="description">Idea files are additional ideas within a file.</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon"><i class="bi bi-collection"></i></div>
-          <h4 class="title"><a href="{% url 'groupfilesIN' %}">Group Files</a></h4>
-          <p class="description">Grouping of files accordingly</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="400">
-          <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-          <h4 class="title"><a href="{% url 'showgroupIN' %}">Show Group</a></h4>
-          <p class="description">Created groups can be viewd and edited.</p>
-        </div>
-
       </div>
 
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" class="img-fluid" alt="">
+            <a href="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Delete">
+              <i class="bi bi-trash"></i></a>
+              <a href="portfolio-details.html" class="link-details" title="Edit"><i class="bi bi-pen"></i></a>
+          </figure>
+
+          <div class="portfolio-info">
+            <h4><a href="portfolio-details.html">filename</a></h4>
+            <p>description</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" class="img-fluid" alt="">
+            <a href="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Delete">
+              <i class="bi bi-trash"></i></a>
+              <a href="portfolio-details.html" class="link-details" title="Edit"><i class="bi bi-pen"></i></a>
+          </figure>
+
+          <div class="portfolio-info">
+            <h4><a href="portfolio-details.html">filename</a></h4>
+            <p>description</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" class="img-fluid" alt="">
+            <a href="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Delete">
+              <i class="bi bi-trash"></i></a>
+              <a href="portfolio-details.html" class="link-details" title="Edit"><i class="bi bi-pen"></i></a>
+          </figure>
+
+          <div class="portfolio-info">
+            <h4><a href="portfolio-details.html">filename</a></h4>
+            <p>description</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" class="img-fluid" alt="">
+            <a href="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Delete">
+              <i class="bi bi-trash"></i></a>
+              <a href="portfolio-details.html" class="link-details" title="Edit"><i class="bi bi-pen"></i></a>
+          </figure>
+
+          <div class="portfolio-info">
+            <h4><a href="portfolio-details.html">filename</a></h4>
+            <p>description</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" class="img-fluid" alt="">
+            <a href="{% static 'A:\Repository\write-minded\writeminded\app\static\img\files.jpg' %}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Delete">
+              <i class="bi bi-trash"></i></a>
+              <a href="portfolio-details.html" class="link-details" title="Edit"><i class="bi bi-pen"></i></a>
+          </figure>
+
+          <div class="portfolio-info">
+            <h4><a href="portfolio-details.html">filename</a></h4>
+            <p>description</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+
+    </div>
+  </section><!-- list of files end -->
 </main>
   <!-- idea nest end -->
 

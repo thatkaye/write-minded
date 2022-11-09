@@ -8,6 +8,25 @@ def home(request):
 
 def ideanest(request):
     return render(request, "ideanest.html")
-
+    
 def signinsignup(request):
     return render(request, "signin-signup.html")
+
+def listoffilesIN(request):
+    return render(request, "listoffilesIN.html")
+
+def uploadfileIN(request):
+    return render(request, "uploadfileIN.html")
+
+def viewfileIN(request):
+    return render(request, "viewfileIN.html")
+
+def addideaIN(request):
+    return render(request, "addideaIN.html")
+
+def groupfilesIN(request):
+    return render(request, "groupfilesIN.html")
+
+def showgroupIN(request):
+    return render(request, "showgroupIN.html")
+
