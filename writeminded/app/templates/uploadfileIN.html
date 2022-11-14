@@ -11,6 +11,10 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <!-- upload file -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/css/fileinput.min.css" type="text/css">
+
   <!-- Favicons -->
   <link href="{% static 'img/favicon.png' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
@@ -39,11 +43,15 @@
 </head>
 
 <body>
+  <!-- upload file -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/js/fileinput.min.js" ></script>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container-fluid">
-
       <div class="row justify-content-center align-items-center">
         <div class="col-xl-11 d-flex align-items-center justify-content-between">
           <!--<h1 class="logo"><a href="index.html">BizPage</a></h1>-->
@@ -96,87 +104,43 @@
 
   <!-- ======= idea nest start ======= -->
   <main id="main">
-  <!-- === File Upload ===
-Design a file upload element. Is it the loading screen and icon? A progress element? Are folders being uploaded by flying across the screen like Ghostbusters? ;)  
--->
-<section id="portfolio" class="section-bg">
-<div class="container" data-aos="fade-up">
-<header class="section-header">
-  <h3 class="section-title">upload file</h3>
-</header>
-<div class="row" data-aos="fade-up" data-aos-delay="100">
-  <div class=" col-lg-12">
-      <ul id="portfolio-flters">
-        <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">idea nest</a></li>
-      </ul>
-    </div>
-  </div>
+  <section id="portfolio" class="section-bg">
+    
+    <div class="container" data-aos="fade-up">
+      <header class="section-header">
+        <h3 class="section-title">upload file</h3>
+      </header>
+      
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class=" col-lg-12">
+          <ul id="portfolio-flters">
+            <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">idea nest</a></li>
+          </ul>
+        </div>
+      </div>
 
-<div id="FileUpload">
-  <div class="wrapper">
-    <div class="upload">
-      <p>Drag files here or <span class="upload__button">Browse</span></p>
-    </div>
-    <div class="uploaded uploaded--one">
-      <i class="far fa-file-pdf"></i>
-      <div class="file">
-        <div class="file__name">
-          <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <p>lorem_ipsum.pdf</p>
-            <ul id="portfolio-flters">
-              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">rename</a></li>
-              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">delete</a></li>
-            </ul>
-        </div>
-          <i class="fas fa-times"></i>
-        </div>
-        <div class="progress">
-          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:100%"></div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="uploaded uploaded--two">
-      <i class="far fa-file-pdf"></i>
-      <div class="file">
-        <div class="file__name">
-          <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <p>dolor_sit.pdf</p>
-            <ul id="portfolio-flters">
-              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">rename</a></li>
-              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">delete</a></li>
-            </ul>
-        </div>
-          <i class="fas fa-times"></i>
-        </div>
-        <div class="progress">
-          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:80%"></div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="uploaded uploaded--three">
-      <i class="far fa-file-pdf"></i>
-      <div class="file">
-        <div class="file__name">
-          <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <p>amet_consectetur.pdf</p>
-            <ul id="portfolio-flters">
-              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">rename</a></li>
-              <li data-filter=".filter-app"><a href="{% url 'ideanest' %}">delete</a></li>
-            </ul>
-        </div>
-          <i class="fas fa-times"></i>
-        </div>
-        <div class="progress">
-          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:60%"></div>
-        </div>
+      <div class="container0">
+        <form method="post" class="post-form" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.file }}
+          <input type="submit" value="upload">
+        </form>
+
+        <!-- <form method="post" action="do_upload.php" enctype="multipart/form-data">
+          {% csrf_token %}
+          <label>Select file to upload</label>
+          <br>
+          <input type="file" name="myfile"> 
+          <input type="submit" name="Submit" value="Click to Upload" href = "{% static 'php/do_upload.php' %">
+
+          <input id="input-b1" type="file" name="myfile"class="file" data-browser-on-zone-click="true">
+
+          <input type="submit" name="Submit" value="Click to Upload"> -->
+        </form>
       </div>
     </div>
   </div>
-</div>
-</div>
-</section>
+  </section>
 </main>
   <!-- idea nest end -->
 
