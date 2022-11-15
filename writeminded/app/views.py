@@ -1,15 +1,24 @@
+from .models import uploadfilemodel
 from app.forms import uploadfileform # for upload file
 import subprocess
 from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib import messages
 
 # Create your views here.
 def uploadfileIN(request):
     if request.method == 'POST':
         form = uploadfileform(request.POST, request.FILES)
-        file = request.FILES['file']
-        return HttpResponse("the name of uploaded file is " + str(file))
+
+        for f in request.FILES.getlist('file'):
+            print(str(f))
+
+        file = request.FILES.getlist('file')[0]
+        fileModel = uploadfilemodel.objects.create(file = file)
+        fileModel.save()
+        messages.info(request, "file has been uploaded")
+        # return HttpResponse("the name of uploaded file is " + str(fileModel.file))
     else:
         form = uploadfileform()
     

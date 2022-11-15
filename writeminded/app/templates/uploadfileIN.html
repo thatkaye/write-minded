@@ -102,6 +102,12 @@
     </div>
   </footer><!-- Efor header to be visible end -->
 
+  {% include 'messages.html' %}
+  {% block content %}
+
+  {% endblock content %}
+
+
   <!-- ======= idea nest start ======= -->
   <main id="main">
   <section id="portfolio" class="section-bg">
@@ -119,11 +125,12 @@
         </div>
       </div>
 
+
+
       <div class="container0">
         <form method="post" class="post-form" enctype="multipart/form-data">
           {% csrf_token %}
-          {{ form.file }}
-          <input type="submit" value="upload">
+          {{form.file}}
         </form>
 
         <!-- <form method="post" action="do_upload.php" enctype="multipart/form-data">
@@ -230,6 +237,17 @@
 
   <!-- Template Main JS File -->
   <script src="{% static '$js/main.js' %}"></script>
+
+  <!-- alert message -->
+  <script>
+    setTimeout(function()
+    {
+      if($('#msg').length > 0)
+      {
+        $('#msg').remove();
+      }
+    }, 2000)
+  </script>
 
 </body>
 
